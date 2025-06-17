@@ -1,0 +1,23 @@
+import PropTypes from "prop-types";
+import Header from "./Header";
+import Hero from "./Hero";
+
+const Layout = ({ children }) => {
+  return (
+    <div className="w-full flex flex-col min-h-screen items-center">
+      <Header />
+      <Hero />
+
+      {/* Main content */}
+      <main className="flex flex-col gap-10 sm:gap-12 md:gap-16 lg:gap-24 xl:gap-32 mx-12 sm:mx-24 md:mx-32 lg:mx-40 xl:mx-48 mb-8 sm:mb-12 md:mb-16 lg:mb-20 xl:mb-24">
+        {children}
+      </main>
+    </div>
+  );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node,
+};
+
+export default Layout;

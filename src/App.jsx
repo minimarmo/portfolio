@@ -1,13 +1,30 @@
 import "./App.css";
+import Layout from "./components/Layout";
+import ProjectCard from "./components/ProjectCard";
+import Showcase from "./components/Showcase";
+import Skill from "./components/Skill";
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-base-200">
-      <div className="p-6 bg-white rounded-xl shadow-md space-y-4">
-        <h1 className="text-2xl font-bold">Hello from Vite + React!</h1>
-        <button className="btn btn-primary">Click me</button>
-      </div>
-    </div>
+    <Layout>
+      <Showcase />
+      <Skill />
+      <ProjectCard
+        title="E-commerce Website"
+        description="Online store with authentication and real-time inventory"
+        stack={["React", "Ant Design", "Supabase"]}
+        imageUrl="/portfolio/images/placeholder.png"
+        demoUrl="https://demo.example.com"
+        sourceUrl="https://github.com/username/project"
+      />
+      <ProjectCard
+        title="E-commerce Website"
+        description="Online store with authentication and real-time inventory"
+        stack={["React", "Ant Design", "Supabase"]}
+        imageUrl="/portfolio/images/placeholder.png"
+        demoUrl="https://demo.example.com"
+      />
+    </Layout>
   );
 }
 
