@@ -30,7 +30,7 @@ const Showcase = () => {
   return (
     <section id="showcase">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
-        Showcase
+        Showcases
       </h2>
 
       <div className="flex flex-wrap justify-center gap-4 md:gap-8 lg:gap-10 xl:gap-12">

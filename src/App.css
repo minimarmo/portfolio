@@ -2,7 +2,52 @@
 
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true; /* set as default */
+  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light; /* color of browser-provided UI */
 
-:root {
+  --color-base-100: rgba(255, 255, 255, 1);           /* ขาวสนิท */
+  --color-base-200: rgba(245, 245, 245, 1);           /* ขาวเทาอ่อน */
+  --color-base-300: rgba(229, 229, 229, 1);           /* เทาอ่อนขึ้นอีก */
+  --color-base-content: rgba(0, 0, 0, 1);             /* สีดำสนิท */
+  --color-primary: rgba(0, 0, 0, 1);                  /* สีดำสนิท */
+  --color-primary-content: rgb(255, 255, 255);        /* ขาวสนิท */
+  --color-secondary: rgba(186, 230, 253, 1);          /* ฟ้าพาสเทล */
+  --color-secondary-content: rgba(12, 74, 110, 1);    /* ฟ้าเข้มอ่านง่าย */
+  --color-accent: rgba(234, 179, 8, 1);               /* Mustard Yellow */
+  --color-accent-content: rgba(0, 0, 0, 1);           /* ดำ สำหรับข้อความบนพื้นเหลือง */
+  --color-neutral: rgba(107, 114, 128, 1);            /* สีเทาอมฟ้าเข้มระดับกลาง */
+  --color-neutral-content: rgba(255, 255, 255, 0.95); /* สีขาวอ่อน */
+  --color-info: oklch(70% 0.2 220);
+  --color-info-content: oklch(98% 0.01 220);
+  --color-success: oklch(65% 0.25 140);
+  --color-success-content: oklch(98% 0.01 140);
+  --color-warning: oklch(80% 0.25 80);
+  --color-warning-content: oklch(20% 0.05 80);
+  --color-error: oklch(65% 0.3 30);
+  --color-error-content: oklch(98% 0.01 30);
+
+  /* border radius */
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+
+  /* base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* border size */
+  --border: 1px;
+
+  /* effects */
+  --depth: 1;
+  --noise: 0;
+}
+
+:root:has(input.theme-controller[value=mytheme]:checked),[data-theme="mytheme"] { /* mytheme is the name of the custom theme */
   font-family: Kanit, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+  /* ...rest of CSS variables like above example */
 }

@@ -1,4 +1,18 @@
 const Hero = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/portfolio/files/renuka_cv.pdf";
+    link.download = "renuka_cv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleHireMe = () => {
+    window.location.href =
+      "mailto:renuka.phoubol@gmail.com?subject=Job%20Opportunity%20from%20Your%20Portfolio%20Site";
+  };
+
   return (
     <section className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 mx-12 sm:mx-24 md:mx-32 lg:mx-48 xl:mx-60 my-8 sm:my-12 md:my-16 lg:my-20 xl:my-24">
       <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center">
@@ -16,13 +30,20 @@ const Hero = () => {
         requirements into practical, user-friendly solutions.
       </p>
       <p className="text-xs sm:text-base font-semibold text-center">
-        <strong>Email:</strong> renuka.phoubol@gmail.com
+        <strong>Email:</strong>
+        <span className="ml-2 sm:ml-4">renuka.phoubol@gmail.com</span>
       </p>
       <div className="flex gap-4">
-        <button className="btn btn-outline btn-xs sm:btn-md rounded-lg">
+        <button
+          onClick={handleDownload}
+          className="btn btn-outline btn-xs sm:btn-md rounded-lg"
+        >
           Download CV
         </button>
-        <button className="btn btn-outline btn-xs sm:btn-md rounded-lg">
+        <button
+          onClick={handleHireMe}
+          className="btn btn-primary btn-xs sm:btn-md rounded-lg"
+        >
           Hire Me Now
         </button>
       </div>
