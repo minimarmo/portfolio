@@ -28,7 +28,7 @@ const projects = [
 
 const Showcase = () => {
   return (
-    <section id="showcase">
+    <section id="showcases">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
         Showcases
       </h2>

@@ -1,6 +1,7 @@
 import "./App.css";
-import About from "./components/About";
+import ContactMe from "./components/ContactMe";
 import Layout from "./components/Layout";
+import MyJourney from "./components/MyJourney";
 import ProjectCard from "./components/ProjectCard";
 import Showcase from "./components/Showcase";
 import Skill from "./components/Skill";
@@ -10,7 +11,8 @@ function App() {
     <Layout>
       <Showcase />
       <Skill />
-      <About />
+      <MyJourney />
+      <ContactMe />
       <section id="projects">
         <ProjectCard
           id="e-commerce1"

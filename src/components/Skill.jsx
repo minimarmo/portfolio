@@ -27,7 +27,7 @@ const skills = [
   {
     name: "Tailwind CSS",
     icon: "/portfolio/images/skills/icon-tailwind.png",
-    category: "Styling",
+    category: "Frontend",
   },
 ];
 
@@ -45,7 +45,7 @@ const Skill = () => {
           <div key={cat}>
             <div
               className={`flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-16 ${
-                isLast ? "" : "mb-6 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-16"
+                isLast ? "" : "mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12"
               }`}
             >
               {skills
@@ -59,7 +59,7 @@ const Skill = () => {
                       <img
                         src={skill.icon}
                         alt={skill.name}
-                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain rounded-lg mb-2"
+                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain rounded-lg"
                       />
                     </div>
                   </div>

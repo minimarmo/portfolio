@@ -18,7 +18,7 @@ const Hero = () => {
       <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center">
         Hi! I’m Renuka Phoubol
       </h1>
-      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-center">
+      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-700 font-semibold text-center">
         Frontend developer
       </h2>
       <p className="text-xs sm:text-base text-center">
