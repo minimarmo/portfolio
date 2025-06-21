@@ -50,9 +50,9 @@ const Skill = () => {
             >
               {skills
                 .filter((skill) => skill.category === cat)
-                .map((skill, index) => (
+                .map((skill) => (
                   <div
-                    key={index - skill.name}
+                    key={skill.name}
                     className="flex flex-col items-center hover:scale-105 transition-transform"
                   >
                     <div className="tooltip" data-tip={skill.name}>

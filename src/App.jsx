@@ -5,6 +5,7 @@ import MyJourney from "./components/MyJourney";
 import ProjectCard from "./components/ProjectCard";
 import Showcase from "./components/Showcase";
 import Skill from "./components/Skill";
+import projects from "./datas/projects";
 
 function App() {
   return (
@@ -14,23 +15,18 @@ function App() {
       <MyJourney />
       <ContactMe />
       <section id="projects">
-        <ProjectCard
-          id="e-commerce1"
-          title="E-commerce Website"
-          description="Online store with authentication and real-time inventory"
-          stack={["React", "Ant Design", "Supabase"]}
-          imageUrl="/portfolio/images/placeholder.png"
-          demoUrl="https://demo.example.com"
-          sourceUrl="https://github.com/username/project"
-        />
-        <ProjectCard
-          id="e-commerce2"
-          title="E-commerce Website"
-          description="Online store with authentication and real-time inventory"
-          stack={["React", "Ant Design", "Supabase"]}
-          imageUrl="/portfolio/images/placeholder.png"
-          demoUrl="https://demo.example.com"
-        />
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            stack={project.stack}
+            imageUrl={project.imageUrl}
+            demoUrl={project.demoUrl}
+            sourceUrl={project.sourceUrl}
+          />
+        ))}
       </section>
     </Layout>
   );

@@ -24,12 +24,12 @@ const ProjectCard = ({
       <p className="text-sm sm:text-base text-gray-700">{stack.join(", ")}</p>
 
       {/* Image preview */}
-      <div className="rounded-xl bg-gray-300 h-48 sm:h-60 w-full overflow-hidden">
+      <div className="rounded-xl h-48 sm:h-60 lg:h-100 w-full overflow-hidden">
         {imageUrl && (
           <img
             src={imageUrl}
             alt={`${title} preview`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain rounded-xl"
           />
         )}
       </div>

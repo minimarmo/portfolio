@@ -16,8 +16,8 @@ const contacts = [
   },
   {
     label: "Phone",
-    value: "+66 91-234-5678",
-    href: "tel:+66912345678",
+    value: "+66 97-984-9940",
+    href: "tel:+66979849940",
     icon: <FiPhone />,
   },
   {

@@ -1,32 +1,14 @@
-const projects = [
-  {
-    title: "Portfolio Website",
-    description: "Personal site with React & Tailwind",
-    image: "/portfolio/images/placeholder.png",
-  },
-  {
-    title: "UI Library",
-    description: "Reusable components with DaisyUI",
-    image: "/portfolio/images/placeholder.png",
-  },
-  {
-    title: "Landing Page",
-    description: "Marketing page for a startup",
-    image: "/portfolio/images/placeholder.png",
-  },
-  {
-    title: "Admin Dashboard",
-    description: "Internal tool using Chart.js",
-    image: "/portfolio/images/placeholder.png",
-  },
-  {
-    title: "Analytics Tool",
-    description: "Data visualizations & reports",
-    image: "/portfolio/images/placeholder.png",
-  },
-];
+import projects from "../datas/projects";
 
 const Showcase = () => {
+  const handleScrollTo = (id, offset = 80) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const top = section.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="showcases">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
@@ -34,20 +16,22 @@ const Showcase = () => {
       </h2>
 
       <div className="flex flex-wrap justify-center gap-4 md:gap-8 lg:gap-10 xl:gap-12">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
-            key={index - project.title}
+            key={project.id}
             className="w-full sm:w-[300px] bg-white rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow"
           >
             <img
-              src={project.image}
+              src={project.imageUrl}
               alt={project.title}
               className="w-full h-40 object-cover rounded-t-2xl"
             />
-            <div className="p-5">
+            <button className="p-5" onClick={() => handleScrollTo(project.id)}>
               <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
-              <p className="text-gray-600 text-sm">{project.description}</p>
-            </div>
+              <p className="text-gray-600 text-sm">
+                {project.shortDescription}
+              </p>
+            </button>
           </div>
         ))}
       </div>
