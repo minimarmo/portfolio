@@ -1,34 +1,36 @@
+import { BiLogoTypescript } from "react-icons/bi";
+import { FaPython, FaReact } from "react-icons/fa";
+import { FaDartLang, FaFlutter } from "react-icons/fa6";
+import { IoLogoCss3, IoLogoHtml5 } from "react-icons/io";
+import {
+  RiJavascriptFill,
+  RiSupabaseFill,
+  RiTailwindCssFill,
+} from "react-icons/ri";
+import {
+  SiAntdesign,
+  SiAppwrite,
+  SiChakraui,
+  SiMui,
+  SiRefine,
+} from "react-icons/si";
+
 const skills = [
-  {
-    name: "HTML",
-    icon: "/portfolio/images/skills/icon-html.png",
-    category: "Frontend",
-  },
-  {
-    name: "CSS",
-    icon: "/portfolio/images/skills/icon-css3.png",
-    category: "Frontend",
-  },
-  {
-    name: "JavaScript",
-    icon: "/portfolio/images/skills/icon-javascript.png",
-    category: "Frontend",
-  },
-  {
-    name: "TypeScript",
-    icon: "/portfolio/images/skills/icon-typescript.png",
-    category: "Frontend",
-  },
-  {
-    name: "React",
-    icon: "/portfolio/images/skills/icon-react.png",
-    category: "Frontend",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "/portfolio/images/skills/icon-tailwind.png",
-    category: "Frontend",
-  },
+  { name: "HTML", icon: <IoLogoHtml5 />, category: "Language" },
+  { name: "CSS", icon: <IoLogoCss3 />, category: "Language" },
+  { name: "JavaScript", icon: <RiJavascriptFill />, category: "Language" },
+  { name: "TypeScript", icon: <BiLogoTypescript />, category: "Language" },
+  { name: "Python", icon: <FaPython />, category: "Language" },
+  { name: "Dart", icon: <FaDartLang />, category: "Language" },
+  { name: "React", icon: <FaReact />, category: "Frontend" },
+  { name: "Flutter", icon: <FaFlutter />, category: "Frontend" },
+  { name: "Refine", icon: <SiRefine />, category: "Frontend" },
+  { name: "Tailwind CSS", icon: <RiTailwindCssFill />, category: "Frontend" },
+  { name: "MUI", icon: <SiMui />, category: "Frontend" },
+  { name: "Ant Design", icon: <SiAntdesign />, category: "Frontend" },
+  { name: "Chakra UI", icon: <SiChakraui />, category: "Frontend" },
+  { name: "Appwrite", icon: <SiAppwrite />, category: "Backend&Database" },
+  { name: "Supabase", icon: <RiSupabaseFill />, category: "Backend&Database" },
 ];
 
 const Skill = () => {
@@ -56,11 +58,16 @@ const Skill = () => {
                     className="flex flex-col items-center hover:scale-105 transition-transform"
                   >
                     <div className="tooltip" data-tip={skill.name}>
-                      <img
-                        src={skill.icon}
-                        alt={skill.name}
-                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain rounded-lg"
-                      />
+                      <div
+                        key={skill.name}
+                        className="flex flex-col items-center hover:scale-105 transition-transform"
+                      >
+                        <div className="tooltip" data-tip={skill.name}>
+                          <div className="text-4xl sm:text-5xl">
+                            {skill.icon}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}

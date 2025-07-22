@@ -1,4 +1,4 @@
-const navItems = ["Showcases", "Skills", "My Journey", "Projects"];
+const navItems = ["Projects", "Skills", "My Journey"];
 
 const Header = () => {
   const handleScrollTo = (id, offset = 80) => {
@@ -25,9 +25,7 @@ const Header = () => {
               onClick={() =>
                 handleScrollTo(label.toLowerCase().replace(/\s+/g, "-"))
               }
-              className={`btn btn-ghost btn-xs sm:btn-md rounded-lg ${
-                label === "Projects" ? "hidden sm:inline-flex" : ""
-              }`}
+              className={`btn btn-ghost btn-xs sm:btn-md rounded-lg`}
             >
               {label}
             </button>

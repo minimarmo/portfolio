@@ -1,7 +1,7 @@
 const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/portfolio/files/renuka_cv.pdf";
+    link.href = "/portfolio/files/Renuka_Phoubol_CV.pdf";
     link.download = "renuka_cv.pdf";
     document.body.appendChild(link);
     link.click();
@@ -29,10 +29,7 @@ const Hero = () => {
         problems. I enjoy learning new technologies and turning complex
         requirements into practical, user-friendly solutions.
       </p>
-      <p className="text-xs sm:text-base font-semibold text-center">
-        <strong>Email:</strong>
-        <span className="ml-2 sm:ml-4">renuka.phoubol@gmail.com</span>
-      </p>
+
       <div className="flex gap-4">
         <button
           onClick={handleDownload}

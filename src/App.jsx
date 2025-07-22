@@ -2,19 +2,17 @@ import "./App.css";
 import ContactMe from "./components/ContactMe";
 import Layout from "./components/Layout";
 import MyJourney from "./components/MyJourney";
-import ProjectCard from "./components/ProjectCard";
-import Showcase from "./components/Showcase";
+import Projects from "./components/Projects";
 import Skill from "./components/Skill";
-import projects from "./datas/projects";
 
 function App() {
   return (
     <Layout>
-      <Showcase />
+      <Projects />
       <Skill />
       <MyJourney />
       <ContactMe />
-      <section id="projects">
+      {/* <section id="projects">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}
@@ -27,7 +25,7 @@ function App() {
             sourceUrl={project.sourceUrl}
           />
         ))}
-      </section>
+      </section> */}
     </Layout>
   );
 }
