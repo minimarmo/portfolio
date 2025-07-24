@@ -63,7 +63,7 @@ const ProjectModal = ({ project, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="relative w-[90%] max-w-2xl bg-white rounded-2xl p-6 lg:p-12 shadow-xl"
+        className="relative w-[75vw] h-[90vh] overflow-y-auto bg-white rounded-2xl p-6 lg:p-12 shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -144,9 +144,19 @@ const ProjectModal = ({ project, onClose }) => {
               href={project.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 bg-gray-800 text-white text-sm rounded-md hover:bg-gray-900 transition"
+              className="px-5 py-2 bg-black text-white text-sm rounded-md hover:bg-gray-900 transition"
             >
               Source Code
+            </a>
+          )}
+          {project.prototypeUrl && (
+            <a
+              href={project.prototypeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2 bg-gray-800 text-white text-sm rounded-md hover:bg-gray-900 transition"
+            >
+              Prototype
             </a>
           )}
         </div>
