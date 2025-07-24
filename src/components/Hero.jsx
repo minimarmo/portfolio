@@ -2,7 +2,7 @@ const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/portfolio/files/Renuka_Phoubol_CV.pdf";
-    link.download = "renuka_cv.pdf";
+    link.download = "Renuka_Phoubol_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
